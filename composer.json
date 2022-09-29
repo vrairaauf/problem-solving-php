@@ -1,0 +1,18 @@
+{
+    "name": "raouf/phpunit",
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Raouf\\Phpunit\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "raauf",
+            "email": "vrairaaufabidi@gmail.com"
+        }
+    ],
+    "require": {}
+}

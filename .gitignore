@@ -1,0 +1,8 @@
+lp/
+nlp/
+tbarbich/
+vendor/
+.phpunit.result.cache
+composer.lock
+cour.txt
+ex.JSON
