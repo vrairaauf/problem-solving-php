@@ -218,5 +218,15 @@ class HackerRank{
 		}
 		return count($arr)-$mostRepeated;
 	}
+
+	/*------------------------------*/
+	public static function leftRotate(int $d; array $arr):array{
+		$result=[];
+		for($cmp=0; $cmp<count($arr); $cmp++){
+			$result[$cmp]=$arr[($cmp+$d)%count($arr)];
+		}
+		return $result;
+	}
+	/*--------------------------------------*/
 }
 ?>
