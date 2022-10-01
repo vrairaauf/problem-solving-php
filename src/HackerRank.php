@@ -220,7 +220,7 @@ class HackerRank{
 	}
 
 	/*------------------------------*/
-	public static function leftRotate(int $d; array $arr):array{
+	public static function leftRotate(int $d, array $arr):array{
 		$result=[];
 		for($cmp=0; $cmp<count($arr); $cmp++){
 			$result[$cmp]=$arr[($cmp+$d)%count($arr)];
