@@ -228,5 +228,17 @@ class HackerRank{
 		return $result;
 	}
 	/*--------------------------------------*/
+	public static function matchingString(array $listString, array $queries):array{
+		$response=[];
+		for($i=0; $i<count($queries); $i++){
+			$counter=0;
+			for($j=0; $j<count($listString); $j++){
+				if($queries[$i]==$listString[$j])
+					$counter++;
+			}
+			$response[$i]=$counter;
+		}
+		return $response;
+	}
 }
 ?>

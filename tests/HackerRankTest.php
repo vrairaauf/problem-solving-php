@@ -61,8 +61,12 @@ class HackerRankTest extends TestCase {
 		$this->assertEquals(\Raouf\Phpunit\HackerRank::equalizeArray([1, 2, 3, 3, 3]), 2);
 	}
 	/*----------------------13-------------------------*/
-	/*public function testLeftRotatee(){
+	public function testLeftRotatee(){
 		$this->assertEquals(\Raouf\Phpunit\HackerRank::leftRotate(2, [1,2,3,4,5]), [3,4,5,1,2]);
-	}*/
+	}
+	/*-----------------14-----------------*/
+	public function testMatchingString(){
+		$this->assertEquals(\Raouf\Phpunit\HackerRank::matchingString(["ab", "ab", "abc"], ["ab", "abc", "ac"]), [2, 1, 0]);
+	}
 }
 ?>
