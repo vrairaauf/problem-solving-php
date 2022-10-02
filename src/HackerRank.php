@@ -240,5 +240,36 @@ class HackerRank{
 		}
 		return $response;
 	}
+	/*---------------------------------------*/
+	public static function arrayManipulate(int $n, array $arr):int{
+		$n+=2;
+		
+		$result=[];
+		for($i=0; $i<=$n; $i++){
+			$result[$i]=0;
+		}
+		$i=0;
+		while($i<count($arr)){
+			$start=$arr[$i][0];
+			$end=$arr[$i][1]+1;
+			$add=$arr[$i][2];
+			$result[$start]+=$add;
+			$result[$end]-=$add;
+			$i++;
+		}
+		
+		$max=$result[0];
+		$i=1;
+		while($i<$n){
+			$result[$i]+=$result[$i-1];
+			if($result[$i]>$max)
+				$max=$result[$i];
+			$i++;
+		}
+		//die(var_dump($result));
+		return $max;
+
+	}
+	/*----------------------------------*/
 }
 ?>
