@@ -23,11 +23,12 @@ class LinkedListTest extends TestCase{
 	    $list1->append(3);
 	    $list1->append(4);
 	    $list1->append(5);
-	    $list1->append(100);
-	    $list1->append(200);
-	    $list1->append(300);
+	    $list1->append(6);
+	    $list1->append(7);
+	    $list1->append(8);
 	    
-	    $list1->appendMultiple(89, 412, 120);
+	    $list1->appendMultiple(9, 10, 11);
+	    $list1->insert(12365, 3);
 	    $list1->show();
 	    $this->assertSame(false, $list->compare($list1));
 	    //$this->assertSame(18, $user->age);

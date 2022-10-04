@@ -115,6 +115,26 @@ class LinkedList{
 			$this->preAppend($value);
 		}
 	}
+	/*-----------------------------*/
+	public function insert(int $data, int $position){
+		if($this->isEmpty())
+			return;
+		if($this->size()<$position){
+			echo "out pf bound\n";
+			return;
+		}
+		$vHead=$this->Head;
+		$index=1;
+		while($index<$position-1){
+			$vHead=$vHead->getNext();
+			$index++;
+		}
+		$node=new Node($data);
+		$node->setNext($vHead->getNext());
+		$vHead->setNext($node);
+
+	}
+	/*---------------------------*/
 }
 
 ?>
