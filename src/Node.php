@@ -20,7 +20,7 @@ class Node{
 		$this->data=$data;
 	}
 	/*----------------------------------*/
-	public function setNext(\Raouf\Phpunit\Node $node){
+	public function setNext(/*\Raouf\Phpunit\Node */$node){
 		$this->next=$node;
 	}
 	/*----------------------------------*/

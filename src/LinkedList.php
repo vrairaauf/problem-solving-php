@@ -31,6 +31,48 @@ class LinkedList{
 		return $this->Head->getValue();
 	}
 	/*----------------------------------------*/
+	public function preAppend(int $data){
+		$node=new Node($data);
+		if($this->isEmpty())
+		{
+			$this->Head=$node;
+			return;
+		}
+		$node->setNext($this->Head);
+		$this->Head=$node;
+	}
+	/*-----------------------------------------*/
+	public function pop(){
+		if($this->isEmpty())
+			return;
+		$vHead=$this->Head;
+		while($vHead->getNext()->getNext()!=null){
+			$vHead=$vHead->getNext();
+		}
+		$vHead->setNext(null);
+
+	}
+	/*-------------------------------------*/
+	public function popHead(){
+		if($this->isEmpty())
+			return;
+		$this->Head=$this->Head->getNext();
+	}
+	/*-------------------------------------*/
+	public function show(){
+		if($this->isEmpty())
+		{
+			return;
+		}
+		$vHead=$this->Head;
+		echo "\n";
+		while($vHead!=null){
+			echo $vHead->getValue();
+			echo "\n";
+			$vHead=$vHead->getNext();
+		}		
+	}
+	
 }
 
 ?>
