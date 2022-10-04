@@ -72,7 +72,49 @@ class LinkedList{
 			$vHead=$vHead->getNext();
 		}		
 	}
-	
+	/*--------------------------*/
+	public function size():int{
+		if($this->isEmpty())
+			return 0;
+		$vHead=$this->Head;
+		$size=0;
+		while($vHead!=null){
+			$size++;
+			$vHead=$vHead->getNext();
+		}
+		return $size;
+	}
+	/*------------------------*/
+	public function compare(LinkedList $list):bool{
+		if($this->isEmpty() && $list->isEmpty())
+			return true;
+		if($this->size()==$list->size()){
+			$vhead1=$this->Head;
+			$vhead2=$list->Head;
+			while($vhead1 != null){
+				if($vhead1->getValue()==$vhead2->getValue()){
+					$vhead1=$vhead1->getNext();
+					$vhead2=$vhead2->getNext();
+				}
+				else
+					return false;
+			}
+			return true;
+		}
+		return false;
+	}
+	/*----------------------------*/
+	public function appendMultiple(){
+		foreach (func_get_args() as $value) {
+			$this->append($value);
+		}
+	}
+	/*---------------------------*/
+	public function preAppendMultiple(){
+		foreach (func_get_args() as $value) {
+			$this->preAppend($value);
+		}
+	}
 }
 
 ?>

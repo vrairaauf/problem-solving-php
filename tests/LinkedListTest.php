@@ -17,10 +17,19 @@ class LinkedListTest extends TestCase{
 	    $list->append(200);
 	    $list->append(300);
 	    
-	    $list->pop();
-	    $list->pop();$list->pop();$list->pop();
-	    $list->show();
-	    $this->assertSame(1, $list->getHeadValue());
+	    $list1 = new Linkedlist();
+	    $list1->append(1);
+	    $list1->append(2);
+	    $list1->append(3);
+	    $list1->append(4);
+	    $list1->append(5);
+	    $list1->append(100);
+	    $list1->append(200);
+	    $list1->append(300);
+	    
+	    $list1->appendMultiple(89, 412, 120);
+	    $list1->show();
+	    $this->assertSame(false, $list->compare($list1));
 	    //$this->assertSame(18, $user->age);
 	    //$this->assertEmpty($user->favorite_movies);
 	}
