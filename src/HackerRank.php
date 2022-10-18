@@ -271,5 +271,14 @@ class HackerRank{
 
 	}
 	/*----------------------------------*/
+	public static function taumBDay(int $b, int $w, int $bc, int $wc, int $z):int{
+		if($bc+$z<$wc)
+			return $bc*$b+($bc+$z)*$w;
+		elseif($wc+$z<$bc)
+			return $wc*$w+($wc+$z)*$b;
+		else
+			return $bc*$b+$wc*$w;
+	}
+	/*------------------------------------------*/
 }
 ?>
